@@ -1,0 +1,18 @@
+.foot{
+    background-color: #343434;
+    height: 120px;
+    
+    >*{
+        color:#8F8F8F;
+    }
+
+    .iconosFooter{
+        display: flex;
+        justify-content:center;
+        flex-direction: row;
+        font-size: 25px;
+        >*{
+            margin: 0 20px;
+        }
+    }
+}

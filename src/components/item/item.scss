@@ -1,0 +1,51 @@
+.imageProducts{
+   width: 200px;
+   height: 250px;
+}
+
+.titleItem{
+    font-size: 1.25em;
+}
+
+.imageContainer{
+    height: 500px;
+    width: 350px;
+    border: 1px solid;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(1);
+    transition: 1s ease-in-out;
+    >*{
+        margin: 7px;
+        
+    }
+    
+    .breakLineItem{
+        background-color: black;
+        line-height: 2em;
+    }
+    
+    .addingProduct{
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+        flex-direction: row;
+
+        .itemButton{    
+            width: 33px;
+            height: 30px;
+            border-radius: 5px;
+            
+        }
+    }
+}
+
+.imageContainer:hover{
+    transform: scale(1.030);
+    transition: 1s ease-in-out; 
+}
+
+

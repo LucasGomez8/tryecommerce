@@ -3,7 +3,7 @@ import Contexto from '../../context/context';
 import './item.scss'
 
 export default function Item(props) {
-    const {title,price, image}=props;
+    const {title,price, image, id}=props;
     const { addCarrito } = useContext(Contexto);
 
   return (
@@ -14,7 +14,7 @@ export default function Item(props) {
       <div className='addingProduct mt-4'>
         <p>${price}</p>
         <button className='itemButton' onClick={() =>{
-            addCarrito("locura")
+            addCarrito(id)
         }}>+</button>
       </div>
     </div>

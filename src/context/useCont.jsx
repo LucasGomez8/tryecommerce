@@ -1,36 +1,38 @@
 import axios from "axios";
 import Contexto from "./context";
-import { useState } from "react";
+import Reducer from "../reducer/reducer";
+import { useReducer } from "react";
 
 export default function UseCont(props) {
-    const {children} = props;
-    const [estado, setEstado] = useState([]);
-
+  const {children} = props;
   const initialState = {
       products:[],
       carrito:[],
   };
 
+  const [state, dispatch] = useReducer(Reducer, initialState);
+
   const getProducts = async () => {
     const res = await axios.get(
       "https://fakestoreapi.com/products"
     ) 
-    setEstado(res.data);
-    console.log(res.data); 
+    dispatch({type: "GETPRODUCTS", payload: res.data});
   };
 
   const addCarrito = (item) => {
-    console.log("Agregado al carrito",item);
+    console.log("Agregado al carrito el producto:", item);
+    dispatch({type: "ADDCARRITO", payload: item});
   };
-  
+
+
   const deleteCarrito = () => {};
-    
+  
   return (
         <>
         <Contexto.Provider
         value={{
-          products: estado,
-          //carrito: initialSstate.carrito
+          products: state.products,
+          carrito: state.carrito,
           getProducts,
           addCarrito,
           deleteCarrito,

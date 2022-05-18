@@ -7,12 +7,13 @@ import { Link } from 'react-router-dom'
 export default function Nafbar() {
 
     const boxShadow = {
-        boxShadow: "0px 0px 1px 0px black"
+        boxShadow: "0px 0px 1px 0px black",
+        backgroundColor: "white"
     }
 
   return (
     <div>
-        <Navbar expand="lg" sticky='top' collapseOnSelect style={boxShadow}>
+        <Navbar expand="lg" fixed='top' collapseOnSelect style={boxShadow}>
             <Container >
                 <NavbarBrand >
                     <Nav.Link as={Link} to='/'>Try E-Commerce</Nav.Link>

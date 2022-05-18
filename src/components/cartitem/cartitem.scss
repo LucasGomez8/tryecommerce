@@ -4,4 +4,12 @@
         width: 100px;
         height: 100px;
     }
+
+
+    .cartitem__icon:hover{
+        color: red;
+    }
+    .cartitem__icon:active{
+        color: darkred;
+    }
 }

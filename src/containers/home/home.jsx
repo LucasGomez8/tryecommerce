@@ -10,7 +10,7 @@ export default function Home() {
             <BCarrousel></BCarrousel>
           </div>
         </div>
-        <div className="row justify-content-center mt-5">
+        <div className="row justify-content-center mt-2">
           <div className="col-md-2 m-5 text-center bg-secondary">
             <h4>Productos</h4>
           </div>

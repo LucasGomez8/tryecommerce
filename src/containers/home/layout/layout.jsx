@@ -7,7 +7,7 @@ export default function Layout(props) {
     return (
     <div className='min-vh-100'>
     <Nafbar></Nafbar>
-    <div className='min-vh-100'>
+    <div className='min-vh-100 m-5 p-4'>
         {children}
     </div>
     <Foot></Foot>

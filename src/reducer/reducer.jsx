@@ -13,6 +13,7 @@ export default function Reducer(state, action){
             return {...state, products: payload};
 
         case ADDCARRITO:
+
             return {
                 ...state,
                 carrito: [
@@ -20,7 +21,13 @@ export default function Reducer(state, action){
                     state.products.filter((item)=> item.id == parseInt(payload)),
                 ],
             };
-  
+
+        case DELETECARRITO: 
+            return{
+                ...state,
+                carrito: state.carrito.filter((item) => item[0].id !== parseInt(payload))
+            }
+            
     }
 
 }

@@ -1,0 +1,21 @@
+.rowShop{
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 15px;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.rowShop::-webkit-scrollbar
+{
+	width: 9px;
+	background-color: #dfe6e9;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.rowShop::-webkit-scrollbar-thumb
+{
+	background-color: #777;
+	border-radius: 10px;
+}

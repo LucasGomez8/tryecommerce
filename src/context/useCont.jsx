@@ -8,6 +8,7 @@ export default function UseCont(props) {
   const initialState = {
       products:[],
       carrito:[],
+      cuantity:[],
   };
 
   const [state, dispatch] = useReducer(Reducer, initialState);
@@ -25,7 +26,9 @@ export default function UseCont(props) {
   };
 
 
-  const deleteCarrito = () => {};
+  const deleteCarrito = (item) => {
+    dispatch({type: "DELETECARRITO", payload: item})
+  };
   
   return (
         <>

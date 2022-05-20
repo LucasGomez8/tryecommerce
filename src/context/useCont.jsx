@@ -8,7 +8,8 @@ export default function UseCont(props) {
   const initialState = {
       products:[],
       carrito:[],
-      cuantity:[],
+      category:[],
+      filtered:[],
   };
 
   const [state, dispatch] = useReducer(Reducer, initialState);
@@ -29,6 +30,32 @@ export default function UseCont(props) {
   const deleteCarrito = (item) => {
     dispatch({type: "DELETECARRITO", payload: item})
   };
+
+  const getCategories = async() => {
+    const res = await axios.get(
+      "https://fakestoreapi.com/products"
+    )
+
+    let x= [];
+    let j = 0;
+    res.data.forEach((item, index, array) => {
+      let isIn = false;
+      for(let i= 0; i<x.length; i++){
+          if(item.category == x[i]){
+              isIn = true;
+          }
+      }
+      if(isIn==false){
+        x[j] = item.category;
+        j++;
+      }
+    })
+    dispatch({type: "GETCATEGORIES", payload: x})
+  }
+
+  const getFiltered = (toFilter) => {
+    dispatch({type: "GETFILTERED", payload: toFilter});
+  }
   
   return (
         <>
@@ -36,9 +63,13 @@ export default function UseCont(props) {
         value={{
           products: state.products,
           carrito: state.carrito,
+          category: state.category,
+          filtered: state.filtered,
           getProducts,
           addCarrito,
           deleteCarrito,
+          getCategories,
+          getFiltered,
         }}
         >
         {children}

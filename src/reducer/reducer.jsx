@@ -3,6 +3,8 @@
 const GETPRODUCTS = "GETPRODUCTS";
 const ADDCARRITO = "ADDCARRITO";
 const DELETECARRITO = "DELETECARRITO";
+const GETCATEGORIES = "GETCATEGORIES";
+const GETFILTERED = "GETFILTERED";
 
 
 export default function Reducer(state, action){
@@ -26,6 +28,21 @@ export default function Reducer(state, action){
             return{
                 ...state,
                 carrito: state.carrito.filter((item) => item[0].id !== parseInt(payload))
+            }
+
+        case GETCATEGORIES:
+            return{
+                ...state,
+                category: payload
+            };
+
+        case GETFILTERED:
+            return{
+                ...state,
+                filtered: [
+                    ...state.filtered,
+                    state.products.filter((item) => item.category == payload)
+                ]
             }
             
     }

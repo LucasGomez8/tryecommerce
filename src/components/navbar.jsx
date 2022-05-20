@@ -24,7 +24,7 @@ export default function Nafbar() {
                     <Nav className="ms-auto">
                         <Nav.Link as={Link} to="/about-us">About us</Nav.Link>
                         <Nav.Link as={Link} to="/products">Products</Nav.Link>
-                        <Nav.Link>Categories</Nav.Link>
+                        <Nav.Link as={Link} to ="/categories">Categories</Nav.Link>
                         <Nav.Link>Contact</Nav.Link>
                         <Nav.Link as={Link} to="/cart"><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Nav.Link>
                     </Nav>

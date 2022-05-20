@@ -5,14 +5,12 @@ import uuid from 'node-uuid';
 
 export default function Products() {
   
-  const {getProducts, products, carrito} = useContext(Contexto);
+  const {getProducts, products } = useContext(Contexto);
   useEffect(()=>{
     getProducts();
   },[]);
   
   console.log("Productos desde Productos", products );
-  console.log("Carrito:",carrito);
-
   return (
     <div className='container mb-5'>
       <div className="row justify-content-center align-items-center">

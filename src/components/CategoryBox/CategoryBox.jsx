@@ -1,19 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import './CategoryBox.scss'
+import Contexto from '../../context/context';
 
 export default function CategoryBox(props){
 
     const {name} = props;
+    const {getFiltered} = useContext(Contexto);
 
-    const hanldeFiltered = (value) => {
-        props.getFiltered(value);
-    }
 
   return (
     <div className='container'>
         <div className="row">
-            <div className="col-md-2">
-               <input type="button" value={name} placeholder={name} onChange={e => hanldeFiltered(e.target.value)} />
-            </div>
+          <div className='col-md-12'>
+              <button className='btn btn-secondary catButton' onClick={ () => getFiltered(name)}>{name}</button>
+          </div>
         </div>
     </div>
   )

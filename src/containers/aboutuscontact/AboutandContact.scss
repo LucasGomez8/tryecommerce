@@ -1,0 +1,56 @@
+.cont{
+    height: 30rem;
+    width: 30rem;
+    background-color: aqua;
+    border-radius: 22%; 
+    margin: 0 auto;
+}
+
+.cabeza{
+    width: 15em;
+    height: 12em;
+    background-color: #fff;
+    position: relative;
+    top: 7em;
+    left: 10em;
+    border-radius:6.5em 6.5em 0 0 ;
+}
+
+.cabeza::before, .cabeza::after{
+    content: '';
+    width: 3em;
+    height: 7.5em;
+    background-color: #fff;
+    position: absolute;
+    right: 12em;
+    top: -1rem;
+    border-radius: 3em 3em 0 0;
+}
+
+.cabeza::after{
+    left: 12em;
+}
+
+.cara{
+    width: 10em;
+    height: 6.3em;
+    background-color: #FEDBC0;
+    position: relative;
+    top: 3.5em;
+    left: 2.5em;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.detalles{
+    
+}
+
+.cuerpo{
+    background-color: #187B96;
+    width: 15em;
+    height: 10.9em;
+    position: relative;
+    top: 7em;
+    left: 10rem;
+}

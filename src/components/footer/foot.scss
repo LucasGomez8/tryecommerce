@@ -1,18 +1,31 @@
 .foot{
     background-color: #343434;
-    height: 120px;
+    height: 150px;
     
     >*{
         color:#8F8F8F;
     }
 
-    .iconosFooter{
-        display: flex;
-        justify-content:center;
-        flex-direction: row;
-        font-size: 25px;
-        >*{
-            margin: 0 20px;
+    .naveg{
+
+        >.ulFooter{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+
+    .iconfoot{
+        text-align: center;
+
+        >.iconosFooter{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            >*{
+                margin: 0 15px;
+                font-size: 1.75em;
+            }
         }
     }
 }

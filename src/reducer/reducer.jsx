@@ -39,10 +39,7 @@ export default function Reducer(state, action){
         case GETFILTERED:
             return{
                 ...state,
-                filtered: [
-                    ...state.filtered,
-                    state.products.filter((item) => item.category == payload)
-                ]
+                filtered: state.products.filter((item) => item.category == payload)
             }
             
     }

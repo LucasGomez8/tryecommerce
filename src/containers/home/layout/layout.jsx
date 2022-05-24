@@ -1,6 +1,6 @@
 import React from 'react'
 import Foot from '../../../components/footer/foot'
-import Nafbar from '../../../components/navbar'
+import Nafbar from '../../../components/navbar/navbar'
 
 export default function Layout(props) {
   const {children} = props;

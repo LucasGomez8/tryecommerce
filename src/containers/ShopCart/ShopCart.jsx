@@ -7,15 +7,6 @@ import uuid from 'node-uuid';
 export default function ShopCart() {
     
     const { carrito, deleteCarrito} = useContext(Contexto);
-    const [total, setTotal] = useState(0);
-
-    console.log("carrito:", carrito);
-
-    const handleTotalAmount = (price) => {
-      let sum = price;
-      sum+=total;
-      setTotal(sum);
-    }
     
     return (
     <div className='container containerShop mt-3'>

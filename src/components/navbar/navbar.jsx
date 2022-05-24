@@ -1,31 +1,33 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
-import { Nav, Navbar, NavbarBrand, Container } from 'react-bootstrap'
+import { Nav, Navbar, NavbarBrand, Container, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import './navbar.scss'
 
 export default function Nafbar() {
 
     const boxShadow = {
-        boxShadow: "0px 0px 1px 0px black",
+        boxShadow: "0px 0px 6px 0px black",
         backgroundColor: "white"
     }
 
   return (
-    <div>
+    <div className='content'>
         <Navbar expand="lg" fixed='top' collapseOnSelect style={boxShadow}>
             <Container >
                 <NavbarBrand >
-                    <Nav.Link as={Link} to='/'>Try E-Commerce</Nav.Link>
+                    <Nav.Link as={Link} to='/' className='titleNav'>Try E-Commerce</Nav.Link>
                 </NavbarBrand>
                
                 <Navbar.Toggle></Navbar.Toggle>
-                <Navbar.Collapse>
+                <Navbar.Collapse className='navcont'>
                     <Nav className="ms-auto">
-                        <Nav.Link as={Link} to="/about-us">About us</Nav.Link>
-                        <Nav.Link as={Link} to="/products">Products</Nav.Link>
-                        <Nav.Link as={Link} to ="/categories">Categories</Nav.Link>
-                        <Nav.Link>Contact</Nav.Link>
+                        <NavDropdown title="Products" className='dropdown'>
+                            <NavDropdown.Item as={Link} to="/products">All</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/categories">Categories</NavDropdown.Item>
+                        </NavDropdown>
+                        <Nav.Link as={Link} to='/about-us-contact'>About Us & Contact</Nav.Link>
                         <Nav.Link as={Link} to="/cart"><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

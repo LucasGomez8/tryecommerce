@@ -3,9 +3,12 @@ import React from 'react'
 
 export default function BCarrousel() {
 
+    const style = {
+        boxShadow: "1px 2px 6px 0px black"
+    }
   return (
     <div>
-    <Carousel>
+    <Carousel style={style}>
         <Carousel.Item>
             <img className="w-100" height="500px" src="https://fotografias.antena3.com/clipping/cmsimages01/2018/10/29/88474E72-3058-4037-ADBA-30FB43FCFDD7/58.jpg" alt="algo" />
         <Carousel.Caption>

@@ -4,7 +4,7 @@ import uuid from 'node-uuid';
 import CategoryBox from '../../components/CategoryBox/CategoryBox';
 import Item from '../../components/item/item';
 
-export default function Categories(){
+export default function Categories(props){
 
   useEffect(()=>{
     getCategories();
@@ -13,8 +13,6 @@ export default function Categories(){
 
   const { getCategories, category, filtered, getProducts} =useContext(Contexto);
 
-
-  console.log("Filtrados desde categorias", filtered);
   return (
     <div className='container'>
       <div className="row justify-content-center align-items-center mt-5">

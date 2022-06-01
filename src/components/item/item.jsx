@@ -14,7 +14,7 @@ export default function Item(props) {
       <div className='addingProduct mt-4'>
         <p>${price}</p>
         <button className='itemButton' onClick={() =>{
-            addCarrito(id)
+            addCarrito(id);
         }}>+</button>
       </div>
     </div>

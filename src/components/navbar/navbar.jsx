@@ -9,12 +9,12 @@ export default function Nafbar() {
 
     const boxShadow = {
         boxShadow: "0px 0px 6px 0px black",
-        backgroundColor: "white"
+        backgroundColor: "#5E5E5E"
     }
 
   return (
     <div className='content'>
-        <Navbar expand="lg" fixed='top' collapseOnSelect style={boxShadow}>
+        <Navbar expand="lg" fixed='top' bg='dark' variant='dark' style={boxShadow}>
             <Container >
                 <NavbarBrand >
                     <Nav.Link as={Link} to='/' className='titleNav'>Try E-Commerce</Nav.Link>
@@ -27,7 +27,7 @@ export default function Nafbar() {
                             <NavDropdown.Item as={Link} to="/products">All</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/categories">Categories</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link as={Link} to='/about-us-contact'>About Us & Contact</Nav.Link>
+                        <Nav.Link as={Link} to='/about-us-contact'>About us & Contact</Nav.Link>
                         <Nav.Link as={Link} to="/cart"><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

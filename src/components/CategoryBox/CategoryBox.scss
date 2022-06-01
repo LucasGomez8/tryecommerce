@@ -1,4 +1,15 @@
-button{
-    width: 170px;
-    text-transform: capitalize;
+.catButton{
+    text-transform: uppercase;
+   width: 180px;
+   height: 40px;
+   color: white;
+   box-shadow: 1px 1px 6px 0px black;
+   background-color: gray;
+   border: none;
+   border-radius: 5px;
+   padding: 8px;
+
+   &:hover{
+       background-color: #377559;
+   }
 }

@@ -7,7 +7,8 @@ import uuid from 'node-uuid';
 export default function ShopCart() {
     
     const { carrito, deleteCarrito} = useContext(Contexto);
-    
+
+
     return (
     <div className='container containerShop mt-3'>
       <div className="row justify-content-center align-items-center rowShop">

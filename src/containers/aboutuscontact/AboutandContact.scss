@@ -4,7 +4,9 @@
     background-color: aqua;
     border-radius: 22%; 
     margin: 0 auto;
+    overflow: hidden;
 }
+
 
 .cabeza{
     width: 15em;
@@ -128,5 +130,97 @@
 
     >*{
         margin: 0 auto;
+    }
+}
+
+//Common Desktop
+@media (min-width: 992px) and (max-width: 1199px) {
+    .cabeza{
+        width: 14em;
+        left: 8em;
+    }
+
+    .cabeza::before{
+        left: 0;
+    }
+
+    .cabeza::after{
+        left: 11em;
+    }
+    
+    .cara{
+        left: 2.25em;
+    }
+
+    .cuerpo{
+        left: 7.5em;
+    }
+
+    .img{
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (min-width:1400px){
+ .cabeza{
+     left: 13em;
+ }
+
+ .cuerpo{
+     left: 13em;
+ }
+}
+
+@media screen and (max-width: 475px) {
+    .cabeza{
+        width: 14em;
+        left: 4.5em;
+        height: 12.85em;
+    }
+    .cabeza::before, .cabeza::after{
+        width: 3.5em;
+        left: 0;
+        top: -1.15em;
+    }
+    .cabeza::after{
+        left: 10.5em;
+    }
+
+    .cara{
+        width: 9.5em;
+        top: 3em;
+        left: 2.25em;
+    }
+
+    .detalles, .detalles::before{
+        left:2em;
+    }
+
+    .detalles::before{
+        left: 4.5em;
+    }
+
+    .detalles::after{
+        left: 1.75em;
+    }
+    
+    .cuerpo{
+        width: 14em;
+        left: 4.5em;
+    }
+
+    .mangas::before{
+        left: 14em;
+    }
+
+    .brazos::before{
+        left: 16.5em;
+    }
+
+    .img{
+        width: 100%;
+        height: 300px;
     }
 }

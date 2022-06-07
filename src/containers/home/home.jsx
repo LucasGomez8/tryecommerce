@@ -22,7 +22,7 @@ export default function Home() {
   return (
       <div className="container">
         <div className="row justify-content-center mt-3">
-          <div className="col-md-12 text-center">
+          <div className="col-12 col-md-12 text-center bcar">
             <BCarrousel></BCarrousel>
           </div>
         </div>

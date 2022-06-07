@@ -10,20 +10,20 @@ export default function CartItem(props) {
     props.deleteCarrito(id);
   }
 
+  const rowStyle ={ 
+    height: "190px",
+  }
   return (
     <div className="container containerCart">
-      <div className="row align-items-center">
-      <div className="col-md-4 border">
+      <div className="row align-items-center justify-content-center" style={rowStyle}>
+      <div className="col-md-6 text-center">
         <img className='imageCart' src={image} alt="" />
         <h4 className='titleCart'>{title}</h4>
       </div>
-      <div className="col-md-4 border">
-        cantidades
-      </div>
-      <div className="col-md-2 border">
+      <div className="col-md-3 text-center">
         <p>${price}</p>
       </div>
-      <div className='col-md-2 border'>
+      <div className='col-md-3 text-center'>
         <FontAwesomeIcon className='cartitem__icon' icon={faTrash} onClick={handleDelete}></FontAwesomeIcon>
       </div>
       </div>
